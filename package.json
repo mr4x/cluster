@@ -1,0 +1,21 @@
+{
+    "name": "cluster",
+    "version": "2021.12.8",
+    "private": true,
+    "scripts": {
+        "fmt": "prettier --write .",
+        "dev": "esbuild src/index.js --bundle --watch --sourcemap --define:DEBUG=true --outfile=docs/bundle.js",
+        "build": "esbuild src/index.js --bundle --minify --define:DEBUG=false --outfile=docs/bundle.js",
+        "serve": "live-server docs --port=8000"
+    },
+    "devDependencies": {
+        "esbuild": "^0.14.2",
+        "live-server": "^1.2.1",
+        "prettier": "^2.5.1"
+    },
+    "dependencies": {
+        "ml-hclust": "^3.1.0",
+        "roughjs": "^4.5.2",
+        "zdog": "^1.1.2"
+    }
+}
